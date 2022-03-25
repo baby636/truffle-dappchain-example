@@ -18,7 +18,9 @@
     "gen:extdev-key": "node scripts/gen-loom-key.js extdev_private_key",
     "gen:loom-key": "node scripts/gen-loom-key.js loom_private_key",
     "loom:init": "cd loom && chmod +x loom && ./loom init -f && cd ..",
-    "loom:run": "cd loom && ./loom run && cd .."
+    "loom:run": "cd loom && ./loom run && cd ..",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "bip39": "^3.0.2",
@@ -33,7 +35,8 @@
     "truffle": "5.0.1",
     "truffle-hdwallet-provider": "^1.0.2",
     "truffle-privatekey-provider": "^1.3.0",
-    "web3": "1.2.1"
+    "web3": "1.2.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
@@ -51,5 +54,6 @@
     "webpack": "4.19.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
-  }
+  },
+  "snyk": true
 }
